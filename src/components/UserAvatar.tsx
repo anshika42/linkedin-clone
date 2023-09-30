@@ -1,0 +1,20 @@
+import { Avatar, AvatarImage, AvatarFallback } from "./primitives/Avatar";
+
+export const UserAvatar: React.FC<{ imageUrl: string; className?: string }> = ({
+  imageUrl,
+  className,
+}) => {
+  return (
+    <Avatar className={className}>
+      <AvatarImage src={imageUrl} />
+      <AvatarFallback>AG</AvatarFallback>
+    </Avatar>
+  );
+};
+
+export const MyAvatar: React.FC<{ className?: string }> = ({ className }) => (
+  <UserAvatar
+    className={className}
+    imageUrl="data:image/png;base64,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"
+  />
+);
